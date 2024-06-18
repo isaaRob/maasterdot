@@ -17,27 +17,33 @@
     </header>
     <!-- FORMULARIO DE USUARIO -->
     <main>
-        <form action="#">
+        <div>
+            <p id="error"></p>
+        </div>
+        <form action="juego.html" id="formEntrada">
             <div class="itemform">
-                <label for="nick">Introduce tu nick</label>
+                <label for="nick">Introduce tu nick*</label>
                 <input type="text" name="nick" value="@" id="nicka" readonly/>
-                <input type="text" name="nick" id="nick"/>
+                <input type="text" name="nick" id="nick" required minlength="2"/>
             </div>
             <div class="itemform">
                 <label for="correo">Correo electrónico</label>
                 <input type="email" name="correo" value="yo@iam.mx" id="correo"/>
             </div>
             <div class="itemform">
-                <label for="nick">Tamaño del juego</label>
+                <label for="nick">Tamaño del juego*</label>
                 <select name="tamano" id="tamano">
-                    <option value="">--Porfavor elige un tamaño--</option>
+                    <option value="0">--Porfavor elige un tamaño--</option>
                     <option value="1">4x4</option>
                     <option value="2">5x5</option>
                     <option value="3">6x6</option>
                 </select>
             </div>
             <div class="itemform">
-                <input type="submit" value="JUGAR">
+                <p>* Obligatorio</p>
+            </div>
+            <div class="itemform">
+                <input type="submit" value="JUGAR" id="jugar">
             </div>
         </form>
     </main>
