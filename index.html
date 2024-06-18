@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <title>Masterdots Game</title>
 </head>
 <body>
     <!-- CABECERA -->
-     <header>
+    <header>
         <img src="./img/logo.png" alt="Logo Masterdots">
-     </header>
-     <!-- FORMULARIO DE USUARIO -->
-     <main>
+    </header>
+    <!-- FORMULARIO DE USUARIO -->
+    <main>
         <form action="#">
             <div class="itemform">
                 <label for="nick">Introduce tu nick</label>
+                <input type="text" name="nick" value="@" id="nicka" readonly/>
                 <input type="text" name="nick" id="nick"/>
+            </div>
+            <div class="itemform">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" value="yo@iam.mx" id="correo"/>
             </div>
             <div class="itemform">
                 <label for="nick">Tamaño del juego</label>
@@ -32,11 +40,11 @@
                 <input type="submit" value="JUGAR">
             </div>
         </form>
-     </main>
-     <!-- PIE DE PAGINA -->
-     <footer>
+    </main>
+    <!-- PIE DE PAGINA -->
+    <footer>
         <p>Curso FrontEnd HTML, CSS y JS</p>
-     </footer>
-    
+    </footer>
 </body>
+<script src="./js/app.js"></script>
 </html>
