@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet" />
     <title>Masterdots Game</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- CABECERA -->
     <header>
-      <img src="./img/logo.png" alt="Logo Masterdots" />
+        <img src="./img/logo.png" alt="Logo Masterdots" />
     </header>
     <!-- FORMULARIO DE USUARIO -->
     <main>
-      <div>
-        <p id="error"></p>
-      </div>
-      <form action="juego.html" id="formEntrada">
-        <div class="itemform">
-          <label for="nick">Introduce tu nick*</label>
-          <input type="text" name="nick" value="@" id="nicka" readonly />
-          <input type="text" name="nick" id="nick" required minlength="2" />
+        <div>
+            <p id="error"></p>
         </div>
-        <div class="itemform">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" name="correo" value="yo@iam.mx" id="correo" />
-        </div>
-        <div class="itemform">
-          <label for="nick">Tamaño del juego*</label>
-          <select name="tamano" id="tamano">
-            <option value="0">--Porfavor elige un tamaño--</option>
-            <option value="1">4x4</option>
-            <option value="2">5x5</option>
-            <option value="3">6x6</option>
-          </select>
-        </div>
-        <div class="itemform">
-          <p>* Obligatorio</p>
-        </div>
-        <div class="itemform">
-          <input type="submit" value="JUGAR" id="jugar" />
-        </div>
-      </form>
+        <form action="juego.html" id="formEntrada">
+            <div class="itemform">
+                <label for="nick">Introduce tu nick*</label>
+                <input type="text" name="nick" value="@" id="nicka" readonly />
+                <input type="text" name="nick" id="nick" required minlength="2" />
+            </div>
+            <div class="itemform">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" value="yo@iam.mx" id="correo" />
+            </div>
+            <div class="itemform">
+                <label for="nick">Tamaño del juego*</label>
+                <select name="tamano" id="tamano">
+                    <option value="0">--Porfavor elige un tamaño--</option>
+                    <option value="1">4x4</option>
+                    <option value="2">5x5</option>
+                    <option value="3">6x6</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <p>* Obligatorio</p>
+            </div>
+            <div class="itemform">
+                <input type="submit" value="JUGAR" id="jugar" />
+            </div>
+        </form>
     </main>
     <!-- PIE DE PAGINA -->
     <footer>
-      <p>@Roberto Isaí Pérez Ayón</p>
+        <p>@Roberto Isaí Pérez Ayón</p>
     </footer>
     <script src="./js/datosUsuario.js"></script>
     <script src="./js/app.js"></script>
-  </body>
+</body>
+
 </html>
