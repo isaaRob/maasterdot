@@ -31,7 +31,7 @@ function getDatosUsuarios() {
     nick = sessionStorage.getItem("nick");
     tamano = sessionStorage.getItem("tamano");
     email = sessionStorage.getItem("email");
-    return nick, tamano, email
+    console.log(nick, tamano, email);
 }
 
 /**

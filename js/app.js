@@ -11,6 +11,9 @@ var tamanotInput;
 var emailInput;
 var formEntrada;
 var error;
+var avatarItems;
+var itemImg;
+var avatarCont;
 
 /**
  * Funcion que los datos de entrada sean correctos, si llama a datosUsuario y a historicoUsuarios.
@@ -37,6 +40,20 @@ function comprobarForm(event) {
 }
 
 /**
+ * Tarjetea el item que estamos moviendo.
+ */
+function moviendoImg(event) {
+    itemImg = event.target;
+}
+
+/**
+ * Cambia la imagen de nuestro contenedor.
+ */
+function cambiarImg(event) {
+    avatarCont.src = itemImg.src;
+}
+
+/**
  * Funcion que carga los Elementos del DOM, comprueba errores en localStorage y manda a llamar comprobarForm.
  */
 function domCargado() {
@@ -51,8 +68,15 @@ function domCargado() {
         error.innerText = sessionStorage.getItem('error');
         sessionStorage.removeItem('error');
     }
-    //exito
     formEntrada.addEventListener("submit", comprobarForm);
+
+    avatarItems = document.getElementsByClassName("avatarImgItem");
+
+    //eventos del Drag & Dop
+    for (let item of avatarItems) item.addEventListener('dragstart', moviendoImg);
+    avatarCont = document.getElementById("avatarImg");
+    avatarCont.addEventListener('dragover', event => {event.preventDefault()})
+    avatarCont.addEventListener('drop', cambiarImg);
 }
 
 //Inicio de garga de eventos.
